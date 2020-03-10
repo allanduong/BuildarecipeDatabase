@@ -1,0 +1,14 @@
+1. SELECT Ingredient.IngredientID, Measurement.MeasurementName
+FROM (Ingredient
+INNER JOIN Measurement ON Ingredient.MeasurmentID = Measurement.MeasurmentID);
+
+2. SELECT DirectMessage.DirectMessageID, User.UserName
+FROM (DirectMessage
+INNER JOIN User ON DirectMessage.UserID = User.UserID);
+
+3. SELECT Recipe.RecipeID, User.UserName, Comment.CommentDescription, Ingredient.IngredientType
+FROM (((Recipe
+INNER JOIN User ON Recipe.UserID = User.UserID)
+INNER JOIN Comment ON Recipe.CommentID = Comment.CommentID)
+INNER JOIN Ingredient ON Recipe.IngredientID = Ingredient.IngredientID);
+
